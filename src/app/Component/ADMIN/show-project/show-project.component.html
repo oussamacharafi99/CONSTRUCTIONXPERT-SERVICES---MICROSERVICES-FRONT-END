@@ -1,0 +1,23 @@
+<div>
+<div   *ngFor="let projet of listProject">
+
+    <h3>{{projet.id}}</h3>
+    <h3>{{projet.name}}</h3>
+    <h3>{{projet.budget}}</h3>
+    <h3>{{projet.heurs}}</h3>
+    <h3>{{projet.startDate}}</h3>
+    <h3>{{projet.endDate}}</h3>
+    <h3>{{projet.description}}</h3>
+
+    <!-- id: number; // Maps to @Id and @GeneratedValue
+    name: string; // Maps to @Column(name = "name")
+    budget: number; // Maps to @Column(name = "budget")
+    heurs: string; // Maps to @Column(name = "heurs") and LocalTime (string representation)
+    startDate: string; // Maps to @Column(name = "startDate") and LocalDate (string representation)
+    endDate: string; // Maps to @Column(name = "endDate") and LocalDate (string representation)
+    description: string;  -->
+
+    <button (click)="delete(projet.id)">delete project</button>
+    <button (click)="showId(projet.id)">show task </button>
+    
+</div>

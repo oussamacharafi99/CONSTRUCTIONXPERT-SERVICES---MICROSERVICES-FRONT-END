@@ -1,0 +1,17 @@
+<!-- src/app/Component/Task/show-task/show-task.component.html -->
+<div *ngFor="let task of listTask" class="task-card">
+    <h3>{{ task.id }}</h3>
+    <h3>{{ task.project_id }}</h3>
+    <h3>{{ task.heurs }}</h3>
+    <h3>{{ task.startDate | date }}</h3>
+    <h3>{{ task.endDate | date }}</h3>
+    <h3>{{ task.status | date }}</h3>
+    <h3>{{ task.description | date }}</h3>
+    
+    <button (click)="delete(task.id)">Delete Task</button>
+    <button (click)="showId(task.id)">show resource </button>
+
+  </div>
+  
+
+  

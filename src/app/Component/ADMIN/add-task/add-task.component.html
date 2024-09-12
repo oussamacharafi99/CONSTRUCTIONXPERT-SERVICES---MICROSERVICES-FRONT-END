@@ -1,0 +1,53 @@
+<div class="article-container">
+    <h2>Add task</h2>
+    <form [formGroup]="formTask" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="project_id">all project</label><br>
+        <select id="project_id" formControlName="project_id" required>
+          <option *ngFor="let project of listProject" [value]="project.id">
+            {{ project.name }} ({{ project.id }})
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">task start:</label>
+        <input type="date" id="startDate" formControlName="startDate" />
+      </div>
+  
+      <div class="form-group">
+        <label for="endDate">task end :</label>
+        <input type="date" id="endDate" formControlName="endDate" />
+      </div>
+      <div class="form-group">
+        <label for="status">task status:</label>
+        <input id="status" formControlName="status" placeholder="Enter task status"/>
+      </div>
+      <!-- id: number; // Maps to @Id and @GeneratedValue
+      project_id: number | null; // Maps to Integer project_id (nullable)
+      heurs: string; // Maps to @Column(name = "heurs") and LocalTime (string representation)
+      startDate: string; // Maps to @Column(name = "startDate") and LocalDate (string representation)
+      endDate: string; // Maps to @Column(name = "endDate") and LocalDate (string representation)
+      status: string; // Maps to @Column(name = "status")
+      description: string; // Maps to @Column(name = "description")
+      project?: Project;  -->
+      <div class="form-group">
+        <label for="description">task description:</label>
+        <textarea id="description" formControlName="description" placeholder="Enter task description"></textarea>
+      </div>
+  
+  
+<!-- 
+      <label for="taskStatus">task status:</label>
+      <select id="taskStatus" formControlName="taskStatus" required>
+        <option value="not_started">not_started</option>
+        <option value="In_Progress">In_Progress</option>
+        <option value="Completed">Completed</option>
+      </select> -->
+  
+      <button type="submit" class="btn btn-primary" [disabled]="formTask.invalid">Submit Task</button>
+    </form>
+  </div>
+                    
+  

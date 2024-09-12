@@ -1,0 +1,32 @@
+<div class="article-container">
+    <h2>Add Resource</h2>
+    <form [formGroup]="formResource" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="resourceName">Resource Name:</label>
+        <input type="text" id="resourceName" formControlName="resourceName" placeholder="Enter resource name" />
+      </div>
+  
+      <div class="form-group">
+        <label for="resourceType">Resource Type:</label>
+        <input type="text" id="resourceType" formControlName="resourceType" placeholder="Enter resource type" />
+      </div>
+      <div class="form-group">
+        <label for="startDate">start Date:</label>
+        <input type="date" id="startDate" formControlName="startDate" placeholder="Enter quantity" />
+      </div>
+  
+  
+      <div class="form-group">
+        <label for="task_id">Task</label><br>
+        <select id="task_id" formControlName="task_id" required>
+          <option *ngFor="let task of listTask" [value]="task.id">
+            {{ task.description }} ({{ task.id }})
+          </option>
+        </select>
+      </div>
+    
+  
+      <button type="submit" class="btn btn-primary" [disabled]="formResource.invalid">Submit Resource</button>
+    </form>
+  </div>

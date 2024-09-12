@@ -1,0 +1,9 @@
+<div *ngFor="let resource of listResource" >
+    <h3>{{ resource.id }}</h3>
+    <h3>{{ resource.task_id }}</h3>
+    <h3>{{ resource.resourceName }}</h3>
+    <h3>{{ resource.resourceType  }}</h3>
+    <h3>{{ resource.startDate  }}</h3>
+    <button (click)="delete(resource.id)">Delete Task</button>
+  </div>
+ 

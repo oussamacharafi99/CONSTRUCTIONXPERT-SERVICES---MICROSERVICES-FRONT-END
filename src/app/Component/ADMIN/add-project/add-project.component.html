@@ -1,0 +1,34 @@
+<div class="article-container">
+    <h2>Project Details</h2>
+    <form [formGroup]="formProject" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="name">project name:</label>
+        <input type="text" id="name" formControlName="name" placeholder="Enter project Name" />
+      </div>
+      <div class="form-group">
+        <label for="budget">project cost:</label>
+        <input type="number" id="budget" formControlName="budget" placeholder="Enter project cost" />
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">project start date:</label>
+        <input type="date" id="startDate" formControlName="startDate" />
+      </div>
+  
+      <div class="form-group">
+        <label for="endDate">project end date:</label>
+        <input type="date" id="endDate" formControlName="endDate" />
+      </div>
+ 
+      <div class="form-group">
+        <label for="description">project description:</label>
+        <textarea id="description" formControlName="description" placeholder="Enter Project Description"></textarea>
+      </div>
+  
+      
+  
+      <button type="submit" class="btn btn-primary" [disabled]="formProject.invalid">Submit Project</button>
+    </form>
+  </div>
+ 
