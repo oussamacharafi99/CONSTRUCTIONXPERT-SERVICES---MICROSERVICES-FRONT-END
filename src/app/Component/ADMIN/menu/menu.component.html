@@ -1,0 +1,22 @@
+<div class="main-left">
+    <div class="username">
+      <h1>Admin</h1>
+    </div>
+    <div class="menu-link">
+      <a routerLink="/dashboard" 
+         (click)="setActive('/dashboard')" 
+         [ngClass]="{'active': activeLink === '/dashboard'}">
+        <i class="pi pi-folder-plus"></i>Projects
+      </a>
+      <a routerLink="/dashboard/add" 
+         (click)="setActive('/dashboard/add')" 
+         [ngClass]="{'active': activeLink === '/dashboard/add'}">
+         <i class="pi pi-list"></i>Tasks
+      </a>
+      <a routerLink="/dashboard/add-resource" 
+         (click)="setActive('/dashboard/add-resource')" 
+         [ngClass]="{'active': activeLink === '/dashboard/add-resource'}">
+        <i class="pi pi-briefcase"></i>Resources
+      </a>
+    </div>
+ </div>

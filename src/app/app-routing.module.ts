@@ -10,26 +10,31 @@ import { ShowResourceComponent } from './Component/USER/show-resource/show-resou
 import { DashboardComponent } from './Component/ADMIN/dashboard/dashboard.component';
 import { UserComponent } from './Component/USER/user/user.component';
 import { MainComponent } from './Component/MAIN/main/main.component';
-import { SignupComponent } from './Component/MAIN/signup/signup.component';
-import { SigninComponent } from './Component/MAIN/signin/signin.component';
+import { DashProjectComponent } from './Component/ADMIN/dash-project/dash-project.component';
+import { DashTaskComponent } from './Component/ADMIN/dash-task/dash-task.component';
 
 const routes: Routes = [
-  { path: 'add-project', component: AddProjectComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'show-project', component: ShowProjectComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'add-task', component: AddTaskComponent },
-  { path: 'main', component: MainComponent },
-  { path: 'show-task', component: ShowTaskComponent },
-  { path: 'logout', component: LogOutComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'logout', component: LogOutComponent },
-  { path: 'signin', component: SigninComponent },
-  { path: 'project_id/:id', component: ShowTaskComponent },
-  { path: 'task_id/:id', component: ShowResourceComponent },
-  { path: 'add-resource', component: AddResourceComponent },
-  { path: 'show-resource', component: ShowResourceComponent },
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  // { path: 'add-project', component: AddProjectComponent },
+  // { path: 'dashboard', component: DashboardComponent },
+  // { path: 'show-project', component: ShowProjectComponent },
+  // { path: 'user', component: UserComponent },
+  // { path: 'add-task', component: AddTaskComponent },
+  // { path: 'main', component: MainComponent },
+  // { path: 'show-task', component: ShowTaskComponent },
+  // { path: 'logout', component: LogOutComponent },
+  // { path: 'project_id/:id', component: ShowTaskComponent },
+  // { path: 'task_id/:id', component: ShowResourceComponent },
+  // { path: 'add-resource', component: AddResourceComponent },
+  // { path: 'show-resource', component: ShowResourceComponent },
+
+  { path: '', component: MainComponent },
+  { path: 'dashboard', component: DashboardComponent , children : [
+    {path : '', component : DashProjectComponent},
+    {path : 'tasks/:id', component : DashTaskComponent},
+    {path : 'add', component : AddTaskComponent},
+    {path : 'add-resource', component : AddResourceComponent},
+  ]},
+  { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '/main' }
 
 ];

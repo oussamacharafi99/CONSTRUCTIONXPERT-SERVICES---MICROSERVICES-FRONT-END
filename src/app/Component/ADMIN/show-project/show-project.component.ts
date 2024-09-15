@@ -10,29 +10,57 @@ import { TaskService } from 'src/app/service/task.service';
   styleUrls: ['./show-project.component.css']
 })
 export class ShowProjectComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name', 'budget', 'hours', 'startDate', 'endDate', 'description', 'actions'];
+  listProject: Project[] = [];
 
-  listProject : Project[] = []
-  listTask : Task[] = []
-  selectedProjectId: number | null = null; // Track the currently selected ticket ID
- constructor(private service:ProjectService,private taskService:TaskService ,private router: Router){}
+  constructor(private service: ProjectService, private taskService: TaskService, private router: Router) {}
 
-ngOnInit(): void {
-this.getAllProject()
-console.log(this.selectedProjectId);
+  ngOnInit(): void {
+    this.getAllProject();
+  }
 
+  getAllProject() {
+    this.service.fetchAllProject().subscribe((res: Project[]) => {
+      this.listProject = res;
+    });
+  }
+
+  delete(id: number) {
+    this.service.deleteProject(id).subscribe();
+  }
+
+  showId(id: number): void {
+    this.router.navigate(['/tasks', id]); 
+    console.log(id);
+    
+  }
 }
-getAllProject(){
-this.service.fetchAllProject().subscribe((res:Project[])=>
-this.listProject = res )
-}
-delete(id:number){
-this.service.deleteProject(id).subscribe();
-}
 
-showId(id: number): void {
 
-  this.router.navigate(['/project_id', id]);
-this.selectedProjectId = this.selectedProjectId === id ? null : id;
+// export class ShowProjectComponent implements OnInit {
 
-}
-}
+//   listProject : Project[] = []
+//   listTask : Task[] = []
+//   selectedProjectId: number | null = null; 
+//  constructor(private service:ProjectService,private taskService:TaskService ,private router: Router){}
+
+// ngOnInit(): void {
+// this.getAllProject()
+// console.log(this.selectedProjectId);
+
+// }
+// getAllProject(){
+// this.service.fetchAllProject().subscribe((res:Project[])=>
+// this.listProject = res )
+// }
+// delete(id:number){
+// this.service.deleteProject(id).subscribe();
+// }
+
+// showId(id: number): void {
+
+//   this.router.navigate(['/project_id', id]);
+// this.selectedProjectId = this.selectedProjectId === id ? null : id;
+
+// }
+// }
