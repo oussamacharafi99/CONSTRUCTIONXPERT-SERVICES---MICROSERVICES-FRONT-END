@@ -75,7 +75,7 @@ export class MainComponent implements OnInit {
           } 
           else if (decodedToken.roles.includes(Role.CUSTOMER)) {
             alert("you are user")
-            this.router.navigate(['/user']);
+            this.router.navigate(['/dashboard']);
           } 
            else {
             this.router.navigate(['/add_project']);

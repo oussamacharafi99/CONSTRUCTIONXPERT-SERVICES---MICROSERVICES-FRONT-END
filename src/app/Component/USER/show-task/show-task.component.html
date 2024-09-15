@@ -64,7 +64,7 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td id="action" mat-cell *matCellDef="let task">
-        <button id="task" mat-raised-button routerLink="tasks/{{task.id}}">Tasks</button>
+        <a id="task" mat-raised-button routerLink="/dashboard/resource/{{task.id}}">Resource</a>
         <button mat-raised-button color="warn" (click)="delete(task.id)">
           <i class="pi pi-delete-left"></i>
         </button>

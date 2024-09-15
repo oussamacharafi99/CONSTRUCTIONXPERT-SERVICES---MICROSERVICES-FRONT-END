@@ -12,6 +12,7 @@ import { UserComponent } from './Component/USER/user/user.component';
 import { MainComponent } from './Component/MAIN/main/main.component';
 import { DashProjectComponent } from './Component/ADMIN/dash-project/dash-project.component';
 import { DashTaskComponent } from './Component/ADMIN/dash-task/dash-task.component';
+import { DashResourceComponent } from './Component/ADMIN/dash-resource/dash-resource.component';
 
 const routes: Routes = [
   // { path: 'add-project', component: AddProjectComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent , children : [
     {path : '', component : DashProjectComponent},
     {path : 'tasks/:id', component : DashTaskComponent},
+    {path: 'resource/:id', component: DashResourceComponent},
     {path : 'add', component : AddTaskComponent},
     {path : 'add-resource', component : AddResourceComponent},
   ]},

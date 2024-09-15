@@ -1,0 +1,34 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+#cards{
+    width: 31%;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--background-color);
+    margin: 8px;
+}
+#cards > h3 {
+    font-size: 16px;
+}
+span{
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+button {
+    background: black;
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover{
+    background: #28364a;
+}

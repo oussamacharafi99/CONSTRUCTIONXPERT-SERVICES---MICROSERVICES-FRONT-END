@@ -8,6 +8,7 @@
           <div class="form-group">
             <label for="project_id">all project</label><br>
             <select id="project_id" formControlName="project_id" required>
+              <option>Select project</option>
               <option *ngFor="let project of listProject" [value]="project.id">
                 {{ project.name }} ({{ project.id }})
               </option>
