@@ -36,18 +36,19 @@ export class ShowTaskComponent implements OnInit {
 
   allTask(): void {
     this.service.fetchAllTaskByProjectId(this.project_id).subscribe((res: Task[]) => {
-      this.listTask.data = res; // Set the data for MatTableDataSource
+      this.listTask.data = res; 
       console.log(this.listTask);
     });
   }
 
   delete(id: number): void {
     this.service.deleteTask(id).subscribe(() => {
-      this.allTask(); // Refresh the task list after deletion
+      this.allTask(); 
     });
   }
 
   showId(id: number): void {
-    this.router.navigate(['/task_id', id]);
+    this.router.navigate(['/resource', id]); 
+    console.log(id);
   }
 }

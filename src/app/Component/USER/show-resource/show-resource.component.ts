@@ -12,8 +12,8 @@ export class ShowResourceComponent implements OnInit {
 
   listResource !: Resource[] 
   task_id !:number 
-constructor(private service:ResourceService,
-  private route: ActivatedRoute,
+    constructor(private service:ResourceService,
+    private route: ActivatedRoute,
     private router: Router
 ){}
 

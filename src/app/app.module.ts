@@ -26,6 +26,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MenuComponent } from './Component/ADMIN/menu/menu.component';
 import { DashTaskComponent } from './Component/ADMIN/dash-task/dash-task.component';
+import { DashResourceComponent } from './Component/ADMIN/dash-resource/dash-resource.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DashTaskComponent } from './Component/ADMIN/dash-task/dash-task.compone
     MainComponent,
     DashProjectComponent,
     MenuComponent,
-    DashTaskComponent
+    DashTaskComponent,
+    DashResourceComponent
   ],
   imports: [
     BrowserModule,

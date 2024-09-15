@@ -1,9 +1,30 @@
-<div *ngFor="let resource of listResource" >
-    <h3>{{ resource.id }}</h3>
-    <h3>{{ resource.task_id }}</h3>
-    <h3>{{ resource.resourceName }}</h3>
-    <h3>{{ resource.resourceType  }}</h3>
-    <h3>{{ resource.startDate  }}</h3>
-    <button (click)="delete(resource.id)">Delete Task</button>
+<h2>Resource</h2>
+<div class="main">
+  <div *ngFor="let resource of listResource" id="cards">
+    <h3><span>Name : </span>{{ resource.resourceName }}</h3>
+    <h3><span>Type : </span>{{ resource.resourceType  }}</h3>
+    <h3><span>Date : </span>{{ resource.startDate  }}</h3>
+    <button (click)="delete(resource.id)">Delete Resource</button>
   </div>
- 
+
+  <div *ngFor="let resource of listResource" id="cards">
+    <h3><span>Name : </span>{{ resource.resourceName }}</h3>
+    <h3><span>Type : </span>{{ resource.resourceType  }}</h3>
+    <h3><span>Date : </span>{{ resource.startDate  }}</h3>
+    <button (click)="delete(resource.id)">Delete Resource</button>
+  </div>
+
+  <div *ngFor="let resource of listResource" id="cards">
+    <h3><span>Name : </span>{{ resource.resourceName }}</h3>
+    <h3><span>Type : </span>{{ resource.resourceType  }}</h3>
+    <h3><span>Date : </span>{{ resource.startDate  }}</h3>
+    <button (click)="delete(resource.id)">Delete Resource</button>
+  </div>
+
+  <div *ngFor="let resource of listResource" id="cards">
+    <h3><span>Name : </span>{{ resource.resourceName }}</h3>
+    <h3><span>Type : </span>{{ resource.resourceType  }}</h3>
+    <h3><span>Date : </span>{{ resource.startDate  }}</h3>
+    <button (click)="delete(resource.id)">Delete Resource</button>
+  </div>
+</div>
