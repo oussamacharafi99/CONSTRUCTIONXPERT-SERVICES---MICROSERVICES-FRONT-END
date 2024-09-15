@@ -1,0 +1,22 @@
+ .pr{
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 12px;
+}
+.add-project{
+    width: 100%;
+    background: var(--primary-color);
+    margin: 30px auto;
+    /* box-shadow: 14px 14px 15px rgba(0, 0, 0, 0.151);  */
+    border-radius: 12px;
+} 
+.show-project{
+    width: 100%;
+    margin: 30px auto;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    border-radius: 12px;
+    padding: 20px ;
+    background: var(--primary-color);
+} 

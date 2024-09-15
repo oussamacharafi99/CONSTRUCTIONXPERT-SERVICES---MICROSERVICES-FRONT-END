@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/service/task.service';
-import { Task } from 'src/app/model/task';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table'; // Add this
 
 @Component({
   selector: 'app-show-task',
@@ -10,21 +10,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ShowTaskComponent implements OnInit {
 
-  listTask !: Task[] 
-  project_id !:number 
-constructor(private service:TaskService,
-  private route: ActivatedRoute,
+  listTask = new MatTableDataSource<Task>(); // Use MatTableDataSource to bind to mat-table
+  project_id!: number;
+
+  // Specify the columns to be displayed
+  displayedColumns: string[] = ['id', 'project_id', 'heurs', 'startDate', 'endDate', 'status', 'description', 'actions'];
+
+  constructor(
+    private service: TaskService,
+    private route: ActivatedRoute,
     private router: Router
-){}
+  ) {}
 
   ngOnInit(): void {
-    this.getProjectId()
-   this.allTask()
-   console.log(this.project_id);
-   
-   
-   
-   
+    this.getProjectId();
+    this.allTask();
   }
 
   getProjectId(): void {
@@ -34,26 +34,20 @@ constructor(private service:TaskService,
     });
   }
 
-  allTask(){
-    this.service.fetchAllTaskByProjectId(this.project_id).subscribe((res:any[])=>{
-      this.listTask =res
-
+  allTask(): void {
+    this.service.fetchAllTaskByProjectId(this.project_id).subscribe((res: Task[]) => {
+      this.listTask.data = res; // Set the data for MatTableDataSource
       console.log(this.listTask);
-      
-      
-      
-    })
-    
+    });
   }
 
-  delete(id:number){
-    this.service.deleteTask(id).subscribe()
-    this.allTask()
+  delete(id: number): void {
+    this.service.deleteTask(id).subscribe(() => {
+      this.allTask(); // Refresh the task list after deletion
+    });
   }
 
   showId(id: number): void {
-
     this.router.navigate(['/task_id', id]);
-  
   }
 }

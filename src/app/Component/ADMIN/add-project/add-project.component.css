@@ -1,0 +1,91 @@
+.article-container{
+    padding: 20px 0;
+}
+.article-container > h2{
+    background: var(--background-color);
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 20px;
+    color: white;
+}
+form{
+    padding: 20px;
+}
+form > .g-group{
+    display: flex;
+}
+.group{
+    width: 50%;
+    text-align: left;
+}
+.group-p{
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: start; */
+    width: 100%;
+}
+.group-p > div{
+    width: 50%;
+    text-align: left;
+}
+
+i{
+    color: var(--text-color);
+    font-size: 20px;
+}
+.form-group{
+    border: 2px solid var(--background-color);
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 7px;
+    background: var(--background-color);
+}
+label{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-group > input{
+    width: 85%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+}
+.form-group >  textarea::placeholder{
+    color: var(--text-color);
+}
+.form-group > input::placeholder{
+    color: var(--text-color);
+}
+.btns{
+    padding-top: 10px;
+    border: 1px solid transparent;
+    background: transparent;
+}
+.btns > button {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btns > button:hover{
+    background: #1F2937;
+}

@@ -1,0 +1,72 @@
+.main{
+    width: 100%;
+    padding: 20px;
+}
+.article-container{
+    padding: 20px 0;
+    background: black;
+    border-radius: 12px;
+}
+.article-container > h2{
+    background: var(--background-color);
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 20px;
+    color: white;
+}
+form{
+    padding: 20px;
+}
+
+label{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.p-group{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.group{
+    width: 50%;
+}
+.form-group{
+    width: 90%;
+}
+.form-group > input , select{
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--background-color);
+    border: none;
+    color: var(--text-color);
+    outline: none;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--background-color);
+    border: none;
+    color: var(--text-color);
+    outline: none;
+}
+.form-group >  textarea::placeholder{
+    color: var(--text-color);
+}
+.form-group > input::placeholder{
+    color: var(--text-color);
+}
+button {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btns > button:hover{
+    background: #1F2937;
+}

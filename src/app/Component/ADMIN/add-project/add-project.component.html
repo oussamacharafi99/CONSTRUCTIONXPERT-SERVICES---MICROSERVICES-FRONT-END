@@ -2,33 +2,42 @@
     <h2>Project Details</h2>
     <form [formGroup]="formProject" (ngSubmit)="onSubmit()">
       
-      <div class="form-group">
-        <label for="name">project name:</label>
-        <input type="text" id="name" formControlName="name" placeholder="Enter project Name" />
-      </div>
-      <div class="form-group">
-        <label for="budget">project cost:</label>
-        <input type="number" id="budget" formControlName="budget" placeholder="Enter project cost" />
-      </div>
-
-      <div class="form-group">
-        <label for="startDate">project start date:</label>
-        <input type="date" id="startDate" formControlName="startDate" />
-      </div>
+      <div class="g-group">
+        <div class="group">
+          <div class="form-group">
+            <label for="name"><i class="pi pi-tag"></i></label>
+            <input type="text" id="name" formControlName="name" placeholder="Enter project Name" />
+          </div>
+          <div class="form-group">
+            <label for="budget"><i class="pi pi-hammer"></i></label>
+            <input type="number" id="budget" formControlName="budget" placeholder="Enter project cost" />
+          </div>
+        </div>
   
-      <div class="form-group">
-        <label for="endDate">project end date:</label>
-        <input type="date" id="endDate" formControlName="endDate" />
+        <div class="group">
+          <div class="form-group">
+            <label for="startDate"><i class="pi pi-calendar"></i></label>
+            <input type="date" id="startDate" formControlName="startDate" />
+          </div>
+      
+          <div class="form-group">
+            <label for="endDate"><i class="pi pi-calendar"></i></label>
+            <input type="date" id="endDate" formControlName="endDate" />
+          </div>
+        </div>
       </div>
  
-      <div class="form-group">
-        <label for="description">project description:</label>
-        <textarea id="description" formControlName="description" placeholder="Enter Project Description"></textarea>
+      <div class="g-group">
+        <div class="group-p">
+          <div class="form-group">
+            <textarea id="description" formControlName="description" placeholder="Enter Project Description"></textarea>
+          </div>
+          
+          <div class="form-group btns">
+          <button type="submit" [disabled]="formProject.invalid">Submit</button>
+          </div>
+        </div>
       </div>
-  
-      
-  
-      <button type="submit" class="btn btn-primary" [disabled]="formProject.invalid">Submit Project</button>
     </form>
   </div>
  

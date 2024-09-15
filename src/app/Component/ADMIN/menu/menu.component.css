@@ -1,0 +1,59 @@
+.main-left{
+    width: 20%;
+    background: yellow;
+    position: fixed;
+    background: #0000004f;
+    box-shadow: 4px 16px 15px #0000005a inset;
+    position: fixed;
+    top: 30%;
+}
+
+.logo > h1 {
+    padding: 35px ;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 900;
+}
+.username > h1{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.menu-link{
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+.menu-link > a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 12px 15px;
+    text-align: left;
+    margin: 4px;
+    background:var(--background-color) ;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-radius: 10px;
+    font-weight: 800;
+    transition: .4s;
+    box-shadow: 4px 4px 15px #00000041;
+    border: 1px solid transparent;
+}
+.menu-link > a > i {
+    width: 20px;
+    margin-right: 20px;
+}
+.menu-link > a.active, .menu-link > a:hover {
+    background:rgba(17, 17, 17, 0.616);
+    backdrop-filter: blur(10px);
+    border: 1px solid grey;
+    color: var(--color-border);
+}

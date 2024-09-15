@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogOutComponent } from './log-out/log-out.component';
-import { SignupComponent } from './Component/MAIN/signup/signup.component';
-import { SigninComponent } from './Component/MAIN/signin/signin.component';
 import { UserComponent } from './Component/USER/user/user.component';
 import { DashboardComponent } from './Component/ADMIN/dashboard/dashboard.component';
 import { MainComponent } from './Component/MAIN/main/main.component';
@@ -19,6 +17,15 @@ import { Interciptor } from './interciptor/interciptor';
 import { AddResourceComponent } from './Component/ADMIN/add-resource/add-resource.component';
 // import { AddResourceComponent } from './Component/ADMIN/add-resource/add-resource.component';
 import { ShowResourceComponent } from './Component/USER/show-resource/show-resource.component';
+import { DashProjectComponent } from './Component/ADMIN/dash-project/dash-project.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTableModule } from '@angular/material/table';
+import { MenuComponent } from './Component/ADMIN/menu/menu.component';
+import { DashTaskComponent } from './Component/ADMIN/dash-task/dash-task.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +39,10 @@ import { ShowResourceComponent } from './Component/USER/show-resource/show-resou
     LogOutComponent,
     DashboardComponent,
     UserComponent,
-    SigninComponent,
-    SignupComponent,
-    MainComponent
+    MainComponent,
+    DashProjectComponent,
+    MenuComponent,
+    DashTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +50,13 @@ import { ShowResourceComponent } from './Component/USER/show-resource/show-resou
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatButtonModule,
   ],
   providers: [
   {
