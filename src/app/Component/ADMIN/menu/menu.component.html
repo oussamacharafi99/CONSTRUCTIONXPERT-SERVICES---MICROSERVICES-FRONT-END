@@ -18,5 +18,11 @@
          [ngClass]="{'active': activeLink === '/dashboard/add-resource'}">
         <i class="pi pi-briefcase"></i>Resources
       </a>
+      <br><br><br><br><br>
+      <a routerLink="" (click)="logout(true)"
+         (click)="setActive('/dashboard/add-resource')" 
+         [ngClass]="{'active': activeLink === '/dashboard/add-resource'}">
+        <i class="pi pi-sign-out"></i>Log out
+      </a>
     </div>
  </div>

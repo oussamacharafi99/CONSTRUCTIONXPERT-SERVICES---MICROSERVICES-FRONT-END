@@ -1,6 +1,6 @@
 .main-left{
     width: 20%;
-    background: yellow;
+    background: #FF5757;
     position: fixed;
     background: #0000004f;
     box-shadow: 4px 16px 15px #0000005a inset;
@@ -50,10 +50,13 @@
 .menu-link > a > i {
     width: 20px;
     margin-right: 20px;
+    color: #FF5757 !important;
 }
 .menu-link > a.active, .menu-link > a:hover {
-    background:rgba(17, 17, 17, 0.616);
+    background: black;
     backdrop-filter: blur(10px);
-    border: 1px solid grey;
-    color: var(--color-border);
+    border: 1px solid #FF5757;
+    color: white;
+    text-shadow: 0 0 15px #FF5757;
+    font-weight: 900;
 }

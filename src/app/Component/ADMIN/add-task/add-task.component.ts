@@ -36,7 +36,7 @@ this.formTask = this.fb.group({
 });
 }
 fetchAllProject(){
-this.projectService.fetchAllProject().subscribe((res:Project[])=>
+this.projectService.getAllProject().subscribe((res:Project[])=>
 this.listProject = res
 
 )

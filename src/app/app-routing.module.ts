@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent , children : [
     {path : '', component : DashProjectComponent},
     {path : 'tasks/:id', component : DashTaskComponent},
-    {path: 'resource/:id', component: DashResourceComponent},
+    {path:  'resource/:id', component: DashResourceComponent},
     {path : 'add', component : AddTaskComponent},
     {path : 'add-resource', component : AddResourceComponent},
   ]},

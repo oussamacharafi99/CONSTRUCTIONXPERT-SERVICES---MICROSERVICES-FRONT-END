@@ -7,16 +7,36 @@
 .add-project{
     width: 100%;
     background: var(--primary-color);
-    margin: 30px auto;
+    margin: 10px auto;
     /* box-shadow: 14px 14px 15px rgba(0, 0, 0, 0.151);  */
     border-radius: 12px;
 } 
 .show-project{
     width: 100%;
-    margin: 30px auto;
+    margin: 10px auto;
     overflow-y: auto !important;
     overflow-x: hidden;
     border-radius: 12px;
     padding: 20px ;
     background: var(--primary-color);
 } 
+.title{
+    border-radius: 12px;
+    background: var(--primary-color);
+    padding: 10px 0 ;
+}
+h2{
+    background: var(--background-color);
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 20px;
+    color: black;
+    display: flex;
+    width: 27%;
+    max-width: 50%;
+    border-radius: 12px;
+    margin-left: 10px;
+    text-shadow: 0 0 15px #FF5757;
+    margin-bottom: 0px;
+}

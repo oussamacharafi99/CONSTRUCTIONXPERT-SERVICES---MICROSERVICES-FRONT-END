@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 
 @Component({
@@ -11,7 +12,7 @@ export class MenuComponent implements OnInit {
   activeLink: string = '';
   username : string = '';
 
-  constructor() { }
+  constructor(private router: Router){}
 
   ngOnInit(): void {
     this.activeLink = '/dashboard';
@@ -33,5 +34,17 @@ export class MenuComponent implements OnInit {
     } else {
       console.log('JWT not found!');
     }
+  }
+
+  check = false;
+  logout(check : boolean) {
+    if(check){
+      localStorage.removeItem('jwt');
+      this.router.navigateByUrl('');
+    }
+    else{
+      console.log("wa hasan");
+    }
+    
   }
 }
