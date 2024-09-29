@@ -7,13 +7,19 @@
     background: black;
     border-radius: 12px;
 }
-.article-container > h2{
+.article-container >h2{
     background: var(--background-color);
     font-weight: 900;
     font-size: 22px;
     text-transform: uppercase;
     padding: 20px;
-    color: white;
+    color: black;
+    display: flex;
+    width: 27%;
+    max-width: 50%;
+    border-radius: 12px;
+    margin-left: 10px;
+    text-shadow: 0 0 15px #FF5757;
 }
 form{
     padding: 20px;
@@ -22,6 +28,7 @@ form{
 label{
     font-size: 17px;
     font-weight: 800;
+    color:white;
 }
 
 .p-group{
@@ -40,6 +47,7 @@ label{
     padding: 10px 20px;
     background: var(--background-color);
     border: none;
+    border-radius: 7px;
     color: var(--text-color);
     outline: none;
 }
@@ -50,6 +58,7 @@ textarea {
     border: none;
     color: var(--text-color);
     outline: none;
+    border-radius: 7px;
 }
 .form-group >  textarea::placeholder{
     color: var(--text-color);
@@ -59,14 +68,15 @@ textarea {
 }
 button {
     background: var(--background-color);
-    color: var(--text-color);
+    color: #FF5757;
     padding: 10px;
     border: none;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    border: 1px solid transparent;
 }
-.btns > button:hover{
+button:hover{
     background: #1F2937;
+    border: 1px solid #FF5757;
 }

@@ -27,6 +27,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MenuComponent } from './Component/ADMIN/menu/menu.component';
 import { DashTaskComponent } from './Component/ADMIN/dash-task/dash-task.component';
 import { DashResourceComponent } from './Component/ADMIN/dash-resource/dash-resource.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { DashResourceComponent } from './Component/ADMIN/dash-resource/dash-reso
     MatNativeDateModule,
     MatTableModule,
     MatButtonModule,
+    MatSortModule
   ],
   providers: [
   {

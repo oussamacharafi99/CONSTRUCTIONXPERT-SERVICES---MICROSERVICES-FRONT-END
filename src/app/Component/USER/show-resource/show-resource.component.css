@@ -18,6 +18,7 @@ span{
     font-size: 17px;
     text-transform: uppercase;
     text-decoration: underline;
+    color: #FF5757;
 }
 button {
     background: black;
@@ -31,4 +32,18 @@ button {
 }
 button:hover{
     background: #28364a;
+}
+h2{
+    background: var(--background-color);
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 20px;
+    color: black;
+    display: flex;
+    width: 27%;
+    max-width: 50%;
+    border-radius: 12px;
+    margin-left: 10px;
+    text-shadow: 0 0 15px #FF5757;
 }
